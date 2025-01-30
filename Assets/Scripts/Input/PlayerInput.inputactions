@@ -427,39 +427,6 @@
                 },
                 {
                     "name": "",
-                    "id": "fba679d4-058d-41a5-af60-15c7e0000b92",
-                    "path": "<Mouse>/scroll/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard and Mouse",
-                    "action": "ScrollWheel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "839c5951-d58c-47be-8ef2-a3ec309a6a9f",
-                    "path": "<Gamepad>/dpad/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";GamePad",
-                    "action": "ScrollWheel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8329fe1b-0ad0-4914-b785-0241e717dcab",
-                    "path": "<Gamepad>/leftStick/y",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ScrollWheel",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "73906320-1de3-48d3-8bf3-10b5427bde53",
                     "path": "<Mouse>/position",
                     "interactions": "",
