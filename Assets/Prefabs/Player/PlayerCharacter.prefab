@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 3029018766687264975}
   - component: {fileID: 5301682443315528086}
   - component: {fileID: 2536593599652078142}
+  - component: {fileID: 2874214670686599819}
   m_Layer: 0
   m_Name: PlayerCharacter
   m_TagString: Untagged
@@ -151,7 +152,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_GravityScale: 1
   m_Material: {fileID: 0}
@@ -211,3 +212,20 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2874214670686599819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4939326817478878853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63a8b3661b6a5fc40bf1554703321992, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myRigidbody: {fileID: 5301682443315528086}
+  flickForce: 15
+  minFlickForce: 1
+  maxFlickForce: 5
+  timeHeld: 0
