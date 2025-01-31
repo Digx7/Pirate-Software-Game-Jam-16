@@ -1085,6 +1085,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1306928032 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2195013161267443137, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+  m_PrefabInstance: {fileID: 944214777453740087}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1306928036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1306928032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a5e3a56d43ecf45a498eac68f3c312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notification: Collectable Found
+  requestLoadUIWidgetChannel: {fileID: 11400000, guid: f9e8b7ff78e0ae943a4926492de10937, type: 2}
+  requestBigNotificationChannel: {fileID: 11400000, guid: c34a64bb37dc8764091cd7009960e395, type: 2}
+  notificationWidgetData: {fileID: 11400000, guid: 93f890fe6eed7e14a9b3c6a35dd93e58, type: 2}
 --- !u!1001 &1312267435
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1461,6 +1482,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Collectable
       objectReference: {fileID: 0}
+    - target: {fileID: 2282553713329252000, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+      propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282553713329252000, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+      propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282553713329252000, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+      propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1306928036}
+    - target: {fileID: 2282553713329252000, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+      propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282553713329252000, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+      propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Notify
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282553713329252000, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+      propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: BigNotificationRequester, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2282553713329252000, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+      propertyPath: onCollect.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8310881795961276176, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.8
@@ -1504,7 +1553,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2195013161267443137, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1306928036}
   m_SourcePrefab: {fileID: 100100000, guid: 493536c56ad25d544955790c5a7e0bd3, type: 3}
 --- !u!1001 &2097622208218288623
 PrefabInstance:

@@ -94,7 +94,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerTag: Player
   ID: 0
-  OnGetCollectableChannel: {fileID: 11400000, guid: fb85a0b5fafb3ac49a9774a31afa8312, type: 2}
+  onGetCollectableChannel: {fileID: 11400000, guid: fb85a0b5fafb3ac49a9774a31afa8312, type: 2}
+  onCollect:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &6312583893267269023
 GameObject:
   m_ObjectHideFlags: 0
