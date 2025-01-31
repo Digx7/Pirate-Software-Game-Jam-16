@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 452ba7928e811bd42b52a5df89447cab, type: 3}
+  m_Name: Main Story
+  m_EditorClassIdentifier: 
+  questName: Main Story
+  nodes:
+  - nodeName: Collect the Ingrediants
+    objectives:
+    - objectiveName: Collect the Flying Pizza
+      data: 
+      amount: 0
+      CurrentAmount: 0
+      IsMet: 0
+    - objectiveName: Collect Jim the Worm
+      data: 
+      amount: 0
+      CurrentAmount: 0
+      IsMet: 0
+    - objectiveName: Collect the Normal Skull
+      data: 
+      amount: 0
+      CurrentAmount: 0
+      IsMet: 0
+  - nodeName: Deliver the Ingredients
+    objectives:
+    - objectiveName: Bring the Ingredients to the Witch
+      data: 
+      amount: 0
+      CurrentAmount: 0
+      IsMet: 0
