@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Movement : MonoBehaviour
 {
@@ -7,6 +8,10 @@ public class Movement : MonoBehaviour
     public float flickForce = 40f;
     public float minFlickForce = 30f;
     public float maxFlickForce = 200f;
+    public UnityEvent onStartCharge;
+    public UnityEvent onDash;
+    public UnityEvent onMoveRight;
+    public UnityEvent onMoveLeft;
 
     private float timeHeld = 0f;
     private bool isHeldDown;
@@ -23,6 +28,7 @@ public class Movement : MonoBehaviour
         if (Input.GetMouseButtonDown(0)) // When Left Click
         {
             isHeldDown = true;
+            onStartCharge.Invoke();
         }
 
         if (isHeldDown)  // Left Click Held-Down Timer
@@ -44,6 +50,10 @@ public class Movement : MonoBehaviour
             myRigidbody.linearVelocity = direction * appliedForce * 2;
 
             timeHeld = 0; // Reset TimeHeld Timer
+
+            onDash.Invoke();
+            if(direction.x > 0) onMoveRight.Invoke();
+            else if(direction.x < 0) onMoveLeft.Invoke();
 
         }
 

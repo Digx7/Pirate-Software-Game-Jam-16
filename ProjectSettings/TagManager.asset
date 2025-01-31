@@ -42,6 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Bg
+    uniqueID: 1560723305
+    locked: 0
+  - name: Middle
+    uniqueID: 2163873621
+    locked: 0
+  - name: Forground
+    uniqueID: 418834493
+    locked: 0
   m_RenderingLayers:
   - Default
   - Light Layer 1
