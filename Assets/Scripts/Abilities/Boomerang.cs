@@ -3,30 +3,41 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(CircleCollider2D))]
 public class Boomerang : MonoBehaviour
 {
     public float speed = 20f;
-    public Rigidbody2D rb;
     public int damage = 20;
+    private Rigidbody2D rb;
+    private bool hasRichoched = false;
+
+    void Awake()
+    {
+        rb = gameObject.GetComponent<Rigidbody2D>();
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         rb.linearVelocity = transform.right * speed;
+        Destroy(gameObject, 2);
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        /*BoomerangReturn firePoint2 = hitInfo.GetComponent<BoomerangReturn>();
-        if(firePoint2 != null)
+        if(hitInfo.tag == "Ricochet" && hasRichoched == false)
         {
             rb.linearVelocity = -transform.right * speed;
+            hasRichoched = true;
         }
-        EnemyHealth myEnemy1 = hitInfo.GetComponent<EnemyHealth>();
-        if(myEnemy1 != null)
+        else if(hitInfo.tag == "Enemy")
         {
-            myEnemy1.TakeDamage(damage);
-            Destroy(gameObject, 2);
-        }*/
+            // EnemyHealth myEnemy1 = hitInfo.GetComponent<EnemyHealth>();
+            // if(myEnemy1 != null)
+            // {
+            //     myEnemy1.TakeDamage(damage);
+            // }
+        }
     }
 }
