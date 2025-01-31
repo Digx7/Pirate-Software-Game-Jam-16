@@ -50,6 +50,7 @@ MonoBehaviour:
   OnControllerFinishedSetup: {fileID: 11400000, guid: 96878672e2f978f468a283d7b6daee5c, type: 2}
   runSetupOnEnable: 1
   characterToPossessOnEnable: {fileID: 0}
+  TryPlayerInteractChannel: {fileID: 11400000, guid: d54db82d4b2378b45ac45ff9233d9d20, type: 2}
   requestLoadUIWidgetChannel: {fileID: 11400000, guid: f9e8b7ff78e0ae943a4926492de10937, type: 2}
   pauseMenuUIWidgetData: {fileID: 11400000, guid: 5dca4f619f5187a4090b83b4e7b856f6, type: 2}
   cameraManager: {fileID: 0}
@@ -234,6 +235,22 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: deef206d-3f15-48d8-971e-27c550d52f84
     m_ActionName: UI/Tracked Orientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6651588715944437}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnInteract
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e0bce361-7807-4984-a25f-da12d90c71f2
+    m_ActionName: 'GamePlay/Interact[/Keyboard/e]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: GamePlay

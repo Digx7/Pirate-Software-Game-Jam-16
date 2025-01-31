@@ -16,4 +16,4 @@ MonoBehaviour:
   Artist: Artist 2
   shouldLoop: 1
   layers:
-  - {fileID: 8300000, guid: 255d5d69a7c56dc4aa21f066e7a16c38, type: 3}
+  - {fileID: 8300000, guid: ea78871946719714c8a53377f90bc64d, type: 3}

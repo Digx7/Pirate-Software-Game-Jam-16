@@ -124,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e03104b7e25f59d4e9e468ef5ce4bfd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  typingSpeed: 0
+  typingSpeed: 100
   speakerNameTextMeshPro: {fileID: 5463440040697904216}
   dialogueTextMeshPro: {fileID: 623903111324690541}
   onConversationUpdateChannel: {fileID: 11400000, guid: d3049d2134918044aa7e78588884abe8, type: 2}

@@ -9,6 +9,7 @@ public class ConversationHolder : MonoBehaviour
     public UIWidgetDataChannel requestUnloadDialogueWidgetChannel;
     public ConversationNodeChannel onConversationUpdateChannel;
 
+    public UnityEvent OnConversationStart;
     public UnityEvent OnConversationEnd;
 
     private int currentNodeIndex = 0;
@@ -33,6 +34,8 @@ public class ConversationHolder : MonoBehaviour
     private void StartConversation()
     {
         Debug.Log("ConversationHolder: StartConversation()");
+
+        OnConversationStart.Invoke();
 
         currentNodeIndex = 0;
         if(TryGetNode())

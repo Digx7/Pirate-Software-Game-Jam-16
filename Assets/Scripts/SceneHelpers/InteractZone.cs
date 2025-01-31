@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(BoxCollider))]
+[RequireComponent(typeof(BoxCollider2D))]
 public class InteractZone : MonoBehaviour
 {
 
@@ -32,7 +32,7 @@ public class InteractZone : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter2D(Collider2D col)
     {
         if(col.tag == playerTag) 
         {
@@ -40,15 +40,23 @@ public class InteractZone : MonoBehaviour
             onPlayerEnter.Invoke();
             isPlayerInZone = true;
         }
+        else
+        {
+            Debug.Log("InteractZone: Something else entered");
+        }
     }
 
-    public void OnTriggerExit(Collider col)
+    public void OnTriggerExit2D(Collider2D col)
     {
         if(col.tag == playerTag) 
         {
             Debug.Log("InteractZone: Player Left Zone");
             onPlayerLeave.Invoke();
             isPlayerInZone = false;
+        }
+        else
+        {
+            Debug.Log("InteractZone: Something else exited");
         }
     }
 }

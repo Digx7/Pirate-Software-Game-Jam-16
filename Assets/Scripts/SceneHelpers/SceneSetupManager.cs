@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class SceneSetupManager : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class SceneSetupManager : MonoBehaviour
     [SerializeField] SongData songToJumpTo;
     
     [SerializeField] bool triggerOnStart = true;
+    public UnityEvent onSetup;
 
     public void Start()
     {
@@ -20,6 +22,7 @@ public class SceneSetupManager : MonoBehaviour
     {
         if(changeGameModeOnSceneStart) onChangeGameModeChannel.Raise(gameModeToChangeToOnSetup);
         if(changeSongOnSceneStart) requestJumpToSongChannel.Raise(songToJumpTo);
+        onSetup.Invoke();
 
         // Add code here
     }

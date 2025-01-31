@@ -383,6 +383,10 @@ PrefabInstance:
       value: Title 1 (TMP)
       objectReference: {fileID: 0}
     - target: {fileID: 5732099593534810254, guid: f5fb38a070db5ff4d897f3c2a88a6b99, type: 3}
+      propertyPath: m_text
+      value: Swept Away
+      objectReference: {fileID: 0}
+    - target: {fileID: 5732099593534810254, guid: f5fb38a070db5ff4d897f3c2a88a6b99, type: 3}
       propertyPath: m_fontSize
       value: 300
       objectReference: {fileID: 0}
