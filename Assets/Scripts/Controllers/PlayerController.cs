@@ -136,6 +136,8 @@ public class PlayerController : GameController
                 break;
             case InputActionPhase.Started:
                 // Add Code here
+                possessedPlayer.StartCharge();
+                Debug.Log("PlayerController: StartCharge");
                 break;
             case InputActionPhase.Performed:
                 // Add Code here
@@ -143,6 +145,8 @@ public class PlayerController : GameController
                 break;
             case InputActionPhase.Canceled:
                 // Add Code here
+                possessedPlayer.EndCharge();
+                Debug.Log("PlayerController: EndCharge");
                 break;
             default:
                 // Add Code here
@@ -196,6 +200,90 @@ public class PlayerController : GameController
             case InputActionPhase.Performed:
                 // Add Code here
                 TryPlayerInteractChannel.Raise();
+                break;
+            case InputActionPhase.Canceled:
+                // Add Code here
+                break;
+            default:
+                // Add Code here
+                break;
+        }
+    }
+
+    public void OnUseAbility1(InputAction.CallbackContext callbackContext)
+    {
+        
+        // For more on the InputActionPhase see: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputActionPhase.html
+        switch (callbackContext.phase)
+        {
+            case InputActionPhase.Disabled:
+                // Add Code here
+                break;
+            case InputActionPhase.Waiting:
+                // Add Code here
+                break;
+            case InputActionPhase.Started:
+                // Add Code here
+                break;
+            case InputActionPhase.Performed:
+                // Add Code here
+                possessedPlayer.UseAbility1();
+                break;
+            case InputActionPhase.Canceled:
+                // Add Code here
+                break;
+            default:
+                // Add Code here
+                break;
+        }
+    }
+
+    public void OnUseAbility2(InputAction.CallbackContext callbackContext)
+    {
+        
+        // For more on the InputActionPhase see: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputActionPhase.html
+        switch (callbackContext.phase)
+        {
+            case InputActionPhase.Disabled:
+                // Add Code here
+                break;
+            case InputActionPhase.Waiting:
+                // Add Code here
+                break;
+            case InputActionPhase.Started:
+                // Add Code here
+                break;
+            case InputActionPhase.Performed:
+                // Add Code here
+                possessedPlayer.UseAbility2();
+                break;
+            case InputActionPhase.Canceled:
+                // Add Code here
+                break;
+            default:
+                // Add Code here
+                break;
+        }
+    }
+
+    public void OnUseAbility3(InputAction.CallbackContext callbackContext)
+    {
+        
+        // For more on the InputActionPhase see: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/api/UnityEngine.InputSystem.InputActionPhase.html
+        switch (callbackContext.phase)
+        {
+            case InputActionPhase.Disabled:
+                // Add Code here
+                break;
+            case InputActionPhase.Waiting:
+                // Add Code here
+                break;
+            case InputActionPhase.Started:
+                // Add Code here
+                break;
+            case InputActionPhase.Performed:
+                // Add Code here
+                possessedPlayer.UseAbility3();
                 break;
             case InputActionPhase.Canceled:
                 // Add Code here

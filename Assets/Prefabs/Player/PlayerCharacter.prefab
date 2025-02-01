@@ -145,7 +145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7049182809767408166
 Transform:
   m_ObjectHideFlags: 0
@@ -263,7 +263,98 @@ MonoBehaviour:
   ID: 1
   controller: {fileID: 0}
   OnPlayerCharacterFinishedSetup: {fileID: 11400000, guid: ec85a42ea4285fd48a9789e68c7f4a7a, type: 2}
+  UpdateIfIsInMenuChannel: {fileID: 11400000, guid: 7929b40b60199784892fdea0c43fb3fa, type: 2}
   cameraManager: {fileID: 0}
+  OnStartCharge:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2874214670686599819}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: StartCharge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnEndCharge:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2874214670686599819}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: EndCharge
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnUseAbility1:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4534438305479683685}
+        m_TargetAssemblyTypeName: BoomerangShoot, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnUseAbility2:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1636275018891861953}
+        m_TargetAssemblyTypeName: SlowShoot, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnUseAbility3:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 803089579919559044}
+        m_TargetAssemblyTypeName: TrapShoot, Assembly-CSharp
+        m_MethodName: Shoot
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnIsInMenu:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2874214670686599819}
+        m_TargetAssemblyTypeName: Movement, Assembly-CSharp
+        m_MethodName: SetIsInMenu
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!50 &5301682443315528086
 Rigidbody2D:
   serializedVersion: 5
@@ -325,7 +416,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.22}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -335,7 +426,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 1}
   m_EdgeRadius: 0
 --- !u!114 &2874214670686599819
 MonoBehaviour:

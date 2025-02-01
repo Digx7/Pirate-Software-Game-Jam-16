@@ -1,11 +1,21 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerCharacter : Character
 {
     [SerializeField] private IntChannel OnPlayerCharacterFinishedSetup;
+    [SerializeField] private BooleanChannel UpdateIfIsInMenuChannel;
     [SerializeField] private CameraManager cameraManager;
+    
+    public UnityEvent OnStartCharge;
+    public UnityEvent OnEndCharge;
+    public UnityEvent OnUseAbility1;
+    public UnityEvent OnUseAbility2;
+    public UnityEvent OnUseAbility3;
+    public BooleanEvent OnIsInMenu;
 
     private Vector2 desiredMoveDirection;
+    private bool isInMenu = false;
 
     // CAMERA FUNCTIONS ===========================================
 
@@ -41,7 +51,17 @@ public class PlayerCharacter : Character
 
     // SETUP FUNCTIONS =============================================
 
-    protected override void OnEnable(){}
+    protected override void OnEnable()
+    {
+        UpdateIfIsInMenuChannel.channelEvent.AddListener(SetIsInMenu);
+    }
+
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+
+        UpdateIfIsInMenuChannel.channelEvent.RemoveListener(SetIsInMenu);
+    }
     
     public override void Setup(int newID = 0)
     {
@@ -53,6 +73,12 @@ public class PlayerCharacter : Character
     protected override void Start()
     {
         desiredMoveDirection = new Vector2();
+    }
+
+    public void SetIsInMenu(bool value)
+    {
+        isInMenu = value;
+        OnIsInMenu.Invoke(isInMenu);
     }
 
     // PLAYER ACTIONS ===============================================
@@ -75,6 +101,37 @@ public class PlayerCharacter : Character
     public void Fire2()
     {
 
+    }
+
+    public void StartCharge()
+    {
+        OnStartCharge.Invoke();
+    }
+
+    public void EndCharge()
+    {
+        OnEndCharge.Invoke();
+    }
+
+    public void UseAbility1()
+    {
+        if(isInMenu)return;
+
+        OnUseAbility1.Invoke();
+    }
+
+    public void UseAbility2()
+    {
+        if(isInMenu)return;
+        
+        OnUseAbility2.Invoke();
+    }
+
+    public void UseAbility3()
+    {
+        if(isInMenu)return;
+        
+        OnUseAbility3.Invoke();
     }
 
 }

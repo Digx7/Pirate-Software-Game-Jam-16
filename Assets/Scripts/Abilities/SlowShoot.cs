@@ -7,15 +7,7 @@ public class SlowShoot : MonoBehaviour
     public Transform firePoint;
     public GameObject slowPrefab;
 
-    void Update() 
-    {
-        if(Input.GetKeyDown(KeyCode.J))
-        {
-            Shoot();
-        }
-    }
-
-    void Shoot()
+    public void Shoot()
     {
         Instantiate(slowPrefab, firePoint.position, firePoint.rotation);
     }

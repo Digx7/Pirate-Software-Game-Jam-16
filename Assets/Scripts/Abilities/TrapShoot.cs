@@ -9,15 +9,7 @@ public class TrapShoot : MonoBehaviour
     public Transform firePoint3;
     public GameObject trapPrefab;
 
-    void Update() 
-    {
-        if(Input.GetKeyDown(KeyCode.L))
-        {
-            Shoot();
-        }
-    }
-
-    void Shoot()
+    public void Shoot()
     {
         Instantiate(trapPrefab, firePoint.position, firePoint.rotation);
         Instantiate(trapPrefab, firePoint2.position, firePoint.rotation);
