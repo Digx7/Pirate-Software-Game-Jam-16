@@ -130,6 +130,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: No Button
       objectReference: {fileID: 0}
+    - target: {fileID: 4090320520985284515, guid: fcdda1224de852644831c34c80b862c7, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: c9bef60a126c2874fb6de32a58e4d36f, type: 3}
+    - target: {fileID: 4090320520985284515, guid: fcdda1224de852644831c34c80b862c7, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: c9bef60a126c2874fb6de32a58e4d36f, type: 3}
     - target: {fileID: 7632145875938098759, guid: fcdda1224de852644831c34c80b862c7, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -346,7 +354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7605889644540895712, guid: 7c863cc170c44a742b078f2f50a1a662, type: 3}
       propertyPath: m_fontSize
-      value: 85.65
+      value: 160.3
       objectReference: {fileID: 0}
     - target: {fileID: 8416761257626244949, guid: 7c863cc170c44a742b078f2f50a1a662, type: 3}
       propertyPath: m_Name

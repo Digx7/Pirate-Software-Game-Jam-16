@@ -1,4 +1,6 @@
 using UnityEngine;
+using System;
+using System.Collections;
 
 public class UIWidget : MonoBehaviour
 {
@@ -13,5 +15,11 @@ public class UIWidget : MonoBehaviour
     public virtual void Teardown()
     {
         Destroy(this.gameObject);
+    }
+
+    protected IEnumerator Delay(VoidDelegate funcToCalAtEnd, float time)
+    {
+        yield return new WaitForSeconds(time);
+        funcToCalAtEnd();
     }
 }
