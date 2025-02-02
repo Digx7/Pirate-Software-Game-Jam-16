@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 using System.Collections;
 using TMPro;
@@ -6,13 +7,13 @@ using TMPro;
 public class NotificationWidget : UIWidget
 {
     public float timeShown = 5f;
-    public float waitUntilFadeOutTime = 2f;
-    public float fadeOutSpeed = 1f;
+    public float waitUntilFadeOutTime = 3f;
     public TextMeshProUGUI notificationTextMeshPro;
     public Image panel;
     public StringChannel requestBigNotificationChannel;
     public UIWidgetDataChannel requestUnloadUIWidget;
     public UIWidgetData notificationUIWidgetData;
+    public UnityEvent OnStartFadeOut;
     
     private string notificationText;
 
@@ -45,18 +46,6 @@ public class NotificationWidget : UIWidget
     IEnumerator FadeOut()
     { 
         yield return new WaitForSeconds(waitUntilFadeOutTime);
-        while (true)
-        {
-            Color panelColor = panel.color;
-            Color textColor = notificationTextMeshPro.color;
-
-            float delta = (Time.deltaTime/fadeOutSpeed);
-            panelColor.a -= delta;
-            textColor.a -= delta;
-
-            panel.color = panelColor;
-            notificationTextMeshPro.color = textColor;
-            yield return null;
-        }
+        OnStartFadeOut.Invoke();
     }
 }

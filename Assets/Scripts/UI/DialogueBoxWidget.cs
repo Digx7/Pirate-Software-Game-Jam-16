@@ -7,6 +7,7 @@ public class DialogueBoxWidget : UIWidget
     public float typingSpeed;
     public TextMeshProUGUI speakerNameTextMeshPro;
     public TextMeshProUGUI dialogueTextMeshPro;
+    public GameObject buttonPrompt;
     public ConversationNodeChannel onConversationUpdateChannel;
 
     private ConversationNode currentNode;
@@ -39,12 +40,16 @@ public class DialogueBoxWidget : UIWidget
         dialogueTextMeshPro.text = "";
         int characterIndex = 0;
 
+        buttonPrompt.SetActive(false);
+
         while(characterIndex < currentNode.line.Length)
         {
             dialogueTextMeshPro.text += currentNode.line[characterIndex];
-            yield return new WaitForSeconds(1f / typingSpeed);
+            yield return new WaitForSeconds(0.1f / typingSpeed);
             characterIndex++;
         }
         isTyping = false;
+
+        buttonPrompt.SetActive(true);
     }
 }
