@@ -426,7 +426,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.32, y: 1}
+  m_Size: {x: 0.55, y: 1.64}
   m_EdgeRadius: 0
 --- !u!114 &2874214670686599819
 MonoBehaviour:
@@ -441,9 +441,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody: {fileID: 5301682443315528086}
-  flickForce: 15
+  flickForce: 20
   minFlickForce: 1
-  maxFlickForce: 5
+  maxFlickForce: 7
   onStartCharge:
     m_PersistentCalls:
       m_Calls:
@@ -699,7 +699,7 @@ Transform:
   m_GameObject: {fileID: 6582826089083151186}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.179, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -713,7 +713,7 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6582826089083151186}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 10
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
@@ -788,7 +788,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.1
+      scalar: 1
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -841,7 +841,7 @@ ParticleSystem:
     startSpeed:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2
+      scalar: -0.5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -1336,12 +1336,12 @@ ParticleSystem:
   ShapeModule:
     serializedVersion: 6
     enabled: 1
-    type: 0
+    type: 10
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
-    donutRadius: 0.2
+    radiusThickness: 0
+    donutRadius: 0.1
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 90, y: 0, z: 0}
     m_Scale: {x: 1, y: 1, z: 1}
@@ -1423,7 +1423,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 0.23
+      value: 0.75
       mode: 0
       spread: 0
       speed:
@@ -1541,15 +1541,15 @@ ParticleSystem:
     serializedVersion: 4
     rateOverTime:
       serializedVersion: 2
-      minMaxState: 1
-      scalar: 100
+      minMaxState: 0
+      scalar: 10
       minScalar: 10
       maxCurve:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0
+          value: 0.25
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1557,7 +1557,7 @@ ParticleSystem:
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 1
+          time: 0.0001
           value: 1
           inSlope: 2
           outSlope: 2
@@ -2163,7 +2163,7 @@ ParticleSystem:
     flipU: 0
     flipV: 0
   VelocityModule:
-    enabled: 0
+    enabled: 1
     x:
       serializedVersion: 2
       minMaxState: 0
@@ -2379,7 +2379,7 @@ ParticleSystem:
     orbitalY:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 1
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -5472,7 +5472,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -2131093675
   m_SortingLayer: 2
-  m_SortingOrder: -10
+  m_SortingOrder: 10
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -5561,13 +5561,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7479463841589430112}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9, y: 0, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 0.13}
+  m_LocalRotation: {x: 0, y: 0, z: -0.9261671, w: 0.37711358}
+  m_LocalPosition: {x: 1.082, y: 0, z: 0}
+  m_LocalScale: {x: 0.23, y: 0.23, z: 0.23}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 7049182809767408166}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -135.69}
 --- !u!212 &137925403169029942
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5612,8 +5612,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 7a21601e9c870ea4ea8b38b90bfbb975, type: 3}
+  m_Color: {r: 0.9433962, g: 0.8822736, b: 0.18096577, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5820,15 +5820,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8527520096692085683, guid: 2b7c91835997cea40a7fbd494012f294, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.17
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8527520096692085683, guid: 2b7c91835997cea40a7fbd494012f294, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.17
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8527520096692085683, guid: 2b7c91835997cea40a7fbd494012f294, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.17
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 8527520096692085683, guid: 2b7c91835997cea40a7fbd494012f294, type: 3}
       propertyPath: m_LocalPosition.x
