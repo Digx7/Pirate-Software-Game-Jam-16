@@ -649,7 +649,7 @@ GameObject:
   - component: {fileID: 2874214670686599819}
   - component: {fileID: 5301682443315528086}
   - component: {fileID: 2536593599652078142}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerCharacter
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -6449,6 +6449,10 @@ PrefabInstance:
     - target: {fileID: 8064472599793833873, guid: 2b7c91835997cea40a7fbd494012f294, type: 3}
       propertyPath: m_Name
       value: Broom
+      objectReference: {fileID: 0}
+    - target: {fileID: 8064472599793833873, guid: 2b7c91835997cea40a7fbd494012f294, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8527520096692085683, guid: 2b7c91835997cea40a7fbd494012f294, type: 3}
       propertyPath: m_LocalScale.x

@@ -31,11 +31,11 @@ public class Traps : MonoBehaviour
         }
         else if(hitInfo.tag == "Enemy")
         {
-            // EnemyHealth myEnemy1 = hitInfo.GetComponent<EnemyHealth>();
-            // if(myEnemy1 != null)
-            // {
-            //     myEnemy1.TakeDamage(damage);
-            // }
+            Health myEnemy1 = hitInfo.GetComponent<Health>();
+            if(myEnemy1 != null)
+            {
+                myEnemy1.Damage(damage);
+            }
         }
     }
 }

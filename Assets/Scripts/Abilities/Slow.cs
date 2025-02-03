@@ -21,10 +21,12 @@ public class Slow : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
-        //EnemyMovement myEnemy = hitInfo.GetComponent<EnemyMovement>();
-        //if(myEnemy1 != null)
-       // {
-            //myEnemy.enemySpeed -= 5;
-        //}
+        if(hitInfo.tag == "Enemy")
+        {
+            GameObject enemy = hitInfo.gameObject;
+
+            EnemyPatrol enemyPatrol = enemy.GetComponentInParent<EnemyPatrol>();
+            if(enemyPatrol != null) enemyPatrol.Slow();
+        }
     }
 }

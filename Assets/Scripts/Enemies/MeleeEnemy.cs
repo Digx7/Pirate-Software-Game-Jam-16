@@ -1,4 +1,7 @@
 using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class MeleeEnemy : MonoBehaviour
 {
@@ -6,6 +9,8 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
     [SerializeField] private int damage;
+    private bool isDead;
+    private bool isAttacking = false;
 
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
@@ -17,7 +22,7 @@ public class MeleeEnemy : MonoBehaviour
 
     //References
     private Animator anim;
-    // private Health playerHealth; WE MIGHT DO HEALTH DIFFERENTLY
+    private Health playerHealth; //WE MIGHT DO HEALTH DIFFERENTLY
     // at the time of writing, no player health script has been made
     private EnemyPatrol enemyPatrol;
 
@@ -34,27 +39,29 @@ public class MeleeEnemy : MonoBehaviour
         //Attack only when player in sight?
         if (PlayerInSight())
         {
-            if (cooldownTimer >= attackCooldown)
+            if (cooldownTimer >= attackCooldown && !isAttacking && !isDead)
             {
                 cooldownTimer = 0;
-                anim.SetTrigger("meleeAttack");
+                // anim.SetTrigger("meleeAttack");
+                StartCoroutine(WindUp());
             }
         }
 
-        if (enemyPatrol != null)
-            enemyPatrol.enabled = !PlayerInSight();
+        if (enemyPatrol != null && !isDead)
+            enemyPatrol.enabled = !isAttacking;
     }
 
     private bool PlayerInSight()
     {
-        RaycastHit2D hit =
-            Physics2D.BoxCast(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
-            0, Vector2.left, 0, playerLayer);
+        Vector2 boxOrigin = boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance;
+        Vector2 boxSize = new Vector2(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y);
+        Vector2 boxDirection = Vector2.left;
+        
+        RaycastHit2D hit = Physics2D.BoxCast(boxOrigin, boxSize, 0, boxDirection, 0, playerLayer);
 
         if (hit.collider != null)
         {
-        // playerHealth = hit.transform.GetComponent<Health>(); nothing happens if player gets hit
+            playerHealth = hit.transform.GetComponent<Health>();
         }
 
         return hit.collider != null;
@@ -62,15 +69,36 @@ public class MeleeEnemy : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireCube(boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z));
+
+        Vector2 boxOrigin = boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance;
+        Vector2 boxSize = new Vector2(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y);
+
+        Gizmos.DrawWireCube(boxOrigin, boxSize);
+    }
+
+    IEnumerator WindUp()
+    {
+        isAttacking = true;
+        anim.SetBool("windUp", true);
+        yield return new WaitForSeconds(3f);
+        anim.SetBool("windUp", false);
+        DamagePlayer();
+        isAttacking = false;
     }
 
     private void DamagePlayer()
     {
         if (PlayerInSight())
         {
-            // playerHealth.TakeDamage(damage); nothing happens if player gets hit
+            playerHealth.Damage(damage); //nothing happens if player gets hit
         }
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        enemyPatrol.Die();
+        anim.SetTrigger("die");
+        Destroy(gameObject, 5f);
     }
 }

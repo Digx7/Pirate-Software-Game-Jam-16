@@ -1,4 +1,7 @@
 using UnityEngine;
+using System;
+using System.Collections;
+using System.Collections.Generic;
 
 public class EnemyPatrol : MonoBehaviour
 {
@@ -13,6 +16,7 @@ public class EnemyPatrol : MonoBehaviour
     [SerializeField] private float speed;
     private Vector3 initScale;
     private bool movingLeft;
+    private bool isSlowed;
 
     [Header("Idle Behaviour")]
     [SerializeField] private float idleDuration;
@@ -21,17 +25,21 @@ public class EnemyPatrol : MonoBehaviour
     [Header("Enemy Animator")]
     [SerializeField] private Animator anim;
 
+    private bool isDead = false;
+
     private void Awake()
     {
         initScale = enemy.localScale;
     }
     private void OnDisable()
     {
-        anim.SetBool("moving", false);
+        if(anim != null) anim.SetBool("moving", false);
     }
 
     private void Update()
     {
+        if(isDead) return;
+        
         if (movingLeft)
         {
             if (enemy.position.x >= leftEdge.position.x)
@@ -46,6 +54,26 @@ public class EnemyPatrol : MonoBehaviour
             else
                 DirectionChange();
         }
+    }
+
+    public void Die()
+    {
+        isDead = true;
+        Destroy(gameObject, 30f);
+    }
+
+    public void Slow()
+    {
+        if(isSlowed) return;
+        
+        StartCoroutine(SlowTimer());
+    }
+
+    IEnumerator SlowTimer()
+    {
+        isSlowed = true;
+        yield return new WaitForSeconds(4f);
+        isSlowed = false;
     }
 
     private void DirectionChange()
@@ -67,7 +95,13 @@ public class EnemyPatrol : MonoBehaviour
             initScale.y, initScale.z);
 
         //Move in that direction
-        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * speed,
+        enemy.position = new Vector3(enemy.position.x + Time.deltaTime * _direction * GetSpeed(),
             enemy.position.y, enemy.position.z);
+    }
+
+    private float GetSpeed()
+    {
+        if(!isSlowed) return speed;
+        else return speed/4;
     }
 }

@@ -9,6 +9,8 @@ public class Health : MonoBehaviour
     public FloatEvent OnDamage;
     public FloatEvent OnHeal;
     public UnityEvent OnDeath;
+    public UnityEvent OnRevivify;
+    private bool isDead = false;
 
     private void Awake()
     {
@@ -19,8 +21,9 @@ public class Health : MonoBehaviour
     {
         CurrentHealth -= damageAmount;
         OnDamage.Invoke(damageAmount);
+        Debug.Log("Health: Took " + damageAmount + " damage");
 
-        if(IsDead()) OnDeath.Invoke();
+        IsDead();
     }
 
     public void Heal(float healAmount)
@@ -29,14 +32,26 @@ public class Health : MonoBehaviour
         OnHeal.Invoke(healAmount);
     }
 
+    public void Revivify()
+    {
+        if(!isDead) return;
+
+        Reset();
+    }
+
     public void Reset()
     {
         CurrentHealth = MaxHealth;
     }
 
-    private bool IsDead()
+    private void IsDead()
     {
-        if(CurrentHealth <= 0) return true;
-        else return false;
+        if(isDead) return;
+        
+        if(CurrentHealth <= 0)
+        {
+            isDead = true;
+            OnDeath.Invoke();
+        }
     }
 }
