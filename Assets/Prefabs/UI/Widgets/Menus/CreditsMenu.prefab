@@ -616,9 +616,60 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Fantasy UI Borders\nby: Kenny\nwww.kenney.nl\n\nLoops Meddieval Vol. 2\nby:
-    alkakrab\nhttps://alkakrab.itch.io/free-medieval-soundtrack-no-copyright\n\nCaveAssetsMaaot\nby:
-    Maaot\nhttps://maaot.itch.io/2d-browncave-assets \n"
+  m_text: 'Fantasy UI Borders
+
+    by: Kenny
+
+    www.kenney.nl
+
+
+    Input Prompts
+
+    by:
+    Kenny
+
+    www.kenney.nl
+
+
+    Cursor Pack
+
+    by: Kenny
+
+    www.kenney.nl
+
+
+    Loops
+    Meddieval Vol. 2
+
+    by: alkakrab
+
+    https://alkakrab.itch.io/free-medieval-soundtrack-no-copyright
+
+
+    CaveAssetsMaaot
+
+    by:
+    Maaot
+
+    https://maaot.itch.io/2d-browncave-assets
+
+
+    Textures for Particles
+    1, 2, & 3
+
+    by:  jellfish0
+
+    https://jellyfish0.itch.io/textures-for-particles
+
+
+    Free
+    Fantasy 200 SFX Pack
+
+    by: TomMusic
+
+    https://tommusic.itch.io/free-fantasy-200-sfx-pack
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 using TMPro;
 
@@ -9,6 +10,8 @@ public class DialogueBoxWidget : UIWidget
     public TextMeshProUGUI dialogueTextMeshPro;
     public GameObject buttonPrompt;
     public ConversationNodeChannel onConversationUpdateChannel;
+
+    public UnityEvent onRender;
 
     private ConversationNode currentNode;
     private bool isTyping = false;
@@ -32,6 +35,7 @@ public class DialogueBoxWidget : UIWidget
         speakerNameTextMeshPro.text = currentNode.speaker;
         if(isTyping) StopAllCoroutines();
         StartCoroutine(TypeOutLine());
+        onRender.Invoke();
     }
 
     IEnumerator TypeOutLine()

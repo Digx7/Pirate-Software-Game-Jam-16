@@ -12,6 +12,7 @@ public class Movement : MonoBehaviour
     public UnityEvent onDash;
     public UnityEvent onMoveRight;
     public UnityEvent onMoveLeft;
+    public UnityEvent onLand;
 
     private float timeHeld = 0f;
     private bool isHeldDown;
@@ -47,6 +48,8 @@ public class Movement : MonoBehaviour
     { 
         if (collision.gameObject.CompareTag("Ground"))
         { 
+            if(!canMove) onLand.Invoke();
+            
             canMove = true;
         } 
     } 
