@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 900c2cff8e9ca4947820e07682587b24, type: 3}
-  m_Name: BigNotification
+  m_Name: BigNotification_Area
   m_EditorClassIdentifier: 
-  widgetPrefab: {fileID: 537430857465596878, guid: 4e84e31f0b10fcd4c9236302f87787d4, type: 3}
+  widgetPrefab: {fileID: 537430857465596878, guid: 724cd7a80c3d3d84f8f20fd15953042a, type: 3}

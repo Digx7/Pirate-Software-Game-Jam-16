@@ -20,5 +20,13 @@ MonoBehaviour:
   - speaker: Witch
     line: I supose you'll want to turn yourself back.
   - speaker: Witch
-    line: If you do you must find 3 objects for me.
-  nextConversationToLoadOnFinish: {fileID: 0}
+    line: If you do you must find 3 ingredients for me.
+  - speaker: Witch
+    line: First, Sol's Skull from the Kaldair Caves
+  - speaker: Witch
+    line: Second, Jim the Worm from the Fang Forest
+  - speaker: Witch
+    line: Lastly, Olly the Pizza from the Balithan Blight
+  - speaker: Witch
+    line: Now, what are you doing floating there?  Get going!
+  nextConversationToLoadOnFinish: {fileID: 11400000, guid: 34a463310b402e0418aad7967e656250, type: 2}

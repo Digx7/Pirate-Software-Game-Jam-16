@@ -1,0 +1,82 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1233149941 &-7538838160001020579
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stone Chain Walk 4_{-7538838160001020579}
+  m_AudioClip: {fileID: 8300000, guid: e321779b962b0f146b35591716c235e5, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &-1551746484585105386
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stone Chain Walk 1_{-1551746484585105386}
+  m_AudioClip: {fileID: 8300000, guid: 6a379af2f0a7ac94eaa692ab71110919, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1731628033791368891
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stone Chain Walk 2_{1731628033791368891}
+  m_AudioClip: {fileID: 8300000, guid: 7cb2d1bf74347e24d81f7ba7bb6d8e19, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &1950387928812565778
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stone Chain Walk 3_{1950387928812565778}
+  m_AudioClip: {fileID: 8300000, guid: acfb35af978593a4681f7430f326e161, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1233149941 &5757681776630540850
+AudioContainerElement:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Stone Chain Walk 5_{5757681776630540850}
+  m_AudioClip: {fileID: 8300000, guid: 4f73a93dff3035449a0780e63f779ef0, type: 3}
+  m_Volume: 0
+  m_Enabled: 1
+--- !u!1307931743 &6418180475301049370
+AudioRandomContainer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EnemyFootstep
+  m_Volume: 0
+  m_Pitch: 0
+  m_AutomaticTriggerTime: 0
+  m_LoopCount: 1
+  m_VolumeRandomizationRange: {x: -1.0666704, y: 3.2000065}
+  m_PitchRandomizationRange: {x: -32.00004, y: 31.99997}
+  m_AutomaticTriggerTimeRandomizationRange: {x: 0, y: 0}
+  m_LoopCountRandomizationRange: {x: 0, y: 0}
+  m_Elements:
+  - {fileID: -1551746484585105386}
+  - {fileID: 1731628033791368891}
+  - {fileID: 1950387928812565778}
+  - {fileID: -7538838160001020579}
+  - {fileID: 5757681776630540850}
+  m_AvoidRepeatingLast: 0
+  m_PlaybackMode: 2
+  m_TriggerMode: 1
+  m_AutomaticTriggerMode: 1
+  m_LoopMode: 1
+  m_VolumeRandomizationEnabled: 1
+  m_PitchRandomizationEnabled: 1
+  m_AutomaticTriggerTimeRandomizationEnabled: 0
+  m_LoopCountRandomizationEnabled: 0

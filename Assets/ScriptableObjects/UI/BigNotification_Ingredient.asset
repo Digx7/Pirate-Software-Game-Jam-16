@@ -9,6 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 726af7d85ce55a045951093ec225ec69, type: 3}
-  m_Name: RequestBigNotification
+  m_Script: {fileID: 11500000, guid: 900c2cff8e9ca4947820e07682587b24, type: 3}
+  m_Name: BigNotification_Ingredient
   m_EditorClassIdentifier: 
+  widgetPrefab: {fileID: 537430857465596878, guid: 4e84e31f0b10fcd4c9236302f87787d4, type: 3}

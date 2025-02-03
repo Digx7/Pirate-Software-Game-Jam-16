@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ public class MeleeEnemy : MonoBehaviour
     [SerializeField] private LayerMask playerLayer;
     private float cooldownTimer = Mathf.Infinity;
 
+    public UnityEvent OnDamagePlayer;
+
     //References
     private Animator anim;
     private Health playerHealth; //WE MIGHT DO HEALTH DIFFERENTLY
@@ -34,7 +37,7 @@ public class MeleeEnemy : MonoBehaviour
 
     private void Update()
     {
-        cooldownTimer += Time.deltaTime;
+        if(!isAttacking) cooldownTimer += Time.deltaTime;
 
         //Attack only when player in sight?
         if (PlayerInSight())
@@ -90,7 +93,8 @@ public class MeleeEnemy : MonoBehaviour
     {
         if (PlayerInSight())
         {
-            playerHealth.Damage(damage); //nothing happens if player gets hit
+            playerHealth.Damage(damage);
+            OnDamagePlayer.Invoke();
         }
     }
 
