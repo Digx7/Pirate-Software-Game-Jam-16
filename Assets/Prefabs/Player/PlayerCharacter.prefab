@@ -829,6 +829,9 @@ MonoBehaviour:
   OnDeath:
     m_PersistentCalls:
       m_Calls: []
+  OnRevivify:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &2874214670686599819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6112,8 +6115,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2131093675
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 7a21601e9c870ea4ea8b38b90bfbb975, type: 3}
   m_Color: {r: 0.9433962, g: 0.8822736, b: 0.18096577, a: 1}
