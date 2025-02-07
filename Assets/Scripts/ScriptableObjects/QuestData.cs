@@ -123,6 +123,7 @@ public class QuestNode
         return value;
     }
 
+
 }
 
 [System.Serializable]
@@ -186,6 +187,11 @@ public struct QuestNodeOutcome
 {
     public QuestNodeOutcomeType outcomeType;
     public string data;
+
+    public void Clear()
+    {
+        data = "";
+    }
 }
 
 public enum QuestNodeOutcomeType {Give_item, Apply_Status}
@@ -195,6 +201,12 @@ public struct QuestObjectiveProgress
 {
     public string objectiveName;
     public int addedAmount;
+
+    public void Clear()
+    {
+        objectiveName = "";
+        addedAmount = 0;
+    }
 }
 
 public class QuestObjectiveProgressEvent : UnityEvent<QuestObjectiveProgress> {}

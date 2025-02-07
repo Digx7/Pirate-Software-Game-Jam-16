@@ -8,8 +8,21 @@ public class GameObjectChannel : ScriptableObject
 
     public GameObjectEvent channelEvent = new GameObjectEvent();
 
+    public GameObject lastValue {get; private set;}
+
+    private void OnEnable()
+    {
+        ResetLastValue();
+    }
+
+    public void ResetLastValue()
+    {
+        lastValue = null;
+    }
+
     public void Raise(GameObject value)
     {
+        lastValue = value;
         channelEvent.Invoke(value);
     }
 

@@ -8,8 +8,21 @@ public class QuestObjectiveProgressChannel : ScriptableObject
 
     public QuestObjectiveProgressEvent channelEvent = new QuestObjectiveProgressEvent();
 
+    public QuestObjectiveProgress lastValue {get; private set;}
+
+    private void OnEnable()
+    {
+        ResetLastValue();
+    }
+
+    public void ResetLastValue()
+    {
+        lastValue.Clear();
+    }
+    
     public void Raise(QuestObjectiveProgress value)
     {
+        lastValue = value;
         channelEvent.Invoke(value);
     }
 

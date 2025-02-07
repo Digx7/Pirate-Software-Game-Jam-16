@@ -44,5 +44,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff5733f260898874b8c446740be46054, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToRequest: Witch
-  requestLoadNewSceneChannel: {fileID: 11400000, guid: c2b143e2c53059e41863bec9247a6d46, type: 2}
+  sceneData:
+    sceneName: 
+    context:
+      SpawnPointID: 0
+  requestLoadNewSceneChannel: {fileID: 11400000, guid: 8827de04fbe126448b662f0c71ab4c6c, type: 2}

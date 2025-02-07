@@ -2,12 +2,12 @@ using UnityEngine;
 
 public class MainMenuWidget : UIMenu
 {
-    [SerializeField] string gamePlayScene;
+    [SerializeField] SceneData gamePlayScene;
     [SerializeField] UIWidgetData optionsMenuWidgetData;
     [SerializeField] UIWidgetData creditsMenuWidgetData;
     [SerializeField] UIWidgetData quitMenuWidgetData;
     
-    [SerializeField] StringChannel requestChangeSceneChannel;
+    [SerializeField] SceneChannel requestChangeSceneChannel;
     [SerializeField] UIWidgetDataChannel requestLoadUIWidgetChannel;
     [SerializeField] UIWidgetDataChannel requestUnLoadUIWidgetChannel;
 

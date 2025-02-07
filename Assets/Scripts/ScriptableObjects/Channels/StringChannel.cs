@@ -7,11 +7,21 @@ public class StringChannel : ScriptableObject
 {
     public StringEvent channelEvent = new StringEvent();
 
-    public string LastValue {get; private set;}
+    public string lastValue {get; private set;}
 
+    private void OnEnable()
+    {
+        ResetLastValue();
+    }
+
+    public void ResetLastValue()
+    {
+        lastValue = null;
+    }
+    
     public void Raise(string value)
     {
-        LastValue = value;
+        lastValue = value;
         channelEvent.Invoke(value);
     }
 

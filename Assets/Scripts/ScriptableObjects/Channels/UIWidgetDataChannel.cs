@@ -8,8 +8,21 @@ public class UIWidgetDataChannel : ScriptableObject
 
     public UIWidgetDataEvent channelEvent = new UIWidgetDataEvent();
 
+    public UIWidgetData lastValue {get; private set;}
+
+    private void OnEnable()
+    {
+        ResetLastValue();
+    }
+
+    public void ResetLastValue()
+    {
+        lastValue = null;
+    }
+    
     public void Raise(UIWidgetData value)
     {
+        lastValue = value;
         channelEvent.Invoke(value);
     }
 

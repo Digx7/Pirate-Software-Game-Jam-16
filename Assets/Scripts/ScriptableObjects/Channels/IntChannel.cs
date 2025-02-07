@@ -8,8 +8,21 @@ public class IntChannel : ScriptableObject
 
     public IntEvent channelEvent = new IntEvent();
 
+    public int lastValue {get; private set;}
+
+    private void OnEnable()
+    {
+        ResetLastValue();
+    }
+
+    public void ResetLastValue()
+    {
+        lastValue = 0;
+    }
+
     public void Raise(int value)
     {
+        lastValue = value;
         channelEvent.Invoke(value);
     }
 }

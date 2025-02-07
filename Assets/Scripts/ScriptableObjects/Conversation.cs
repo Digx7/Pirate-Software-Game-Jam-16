@@ -23,6 +23,12 @@ public struct ConversationNode
     {
         Debug.Log(speaker + ":\n" + line);
     }
+
+    public void Clear()
+    {
+        speaker = "";
+        line = "";
+    }
 }
 
 public class ConversationNodeEvent : UnityEvent<ConversationNode> {}

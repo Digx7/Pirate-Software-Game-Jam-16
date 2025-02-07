@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b5bfa3741bed9f49b30a6ca2e3e93ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeSceneChannel: {fileID: 11400000, guid: c2b143e2c53059e41863bec9247a6d46, type: 2}
-  addSceneChannel: {fileID: 11400000, guid: bb7c0c3c9ac3c0942ade114cdccad065, type: 2}
-  removeSceneChannel: {fileID: 11400000, guid: 89fd2c6dfcf05e744b24835196a4c655, type: 2}
+  changeSceneChannel: {fileID: 11400000, guid: 8827de04fbe126448b662f0c71ab4c6c, type: 2}
+  addSceneChannel: {fileID: 11400000, guid: 3b6a7d357b4c25c4bae7422e3eaae65e, type: 2}
+  removeSceneChannel: {fileID: 11400000, guid: cb90b9e6dc55e6043b2166e967a386d1, type: 2}
+  updateSceneContextChannel: {fileID: 11400000, guid: e06cbdcf90a46504dba97326cd4f7388, type: 2}

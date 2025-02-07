@@ -30,7 +30,7 @@ public class NotificationWidget : UIWidget
     
     private void Render()
     {
-        notificationText = requestBigNotificationChannel.LastValue;
+        notificationText = requestBigNotificationChannel.lastValue;
 
         notificationTextMeshPro.text = notificationText;
         StartCoroutine(FadeOut());

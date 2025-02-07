@@ -39,3 +39,9 @@ public class GameObjectEvent : UnityEvent<GameObject> {}
 [System.Serializable]
 public class UIWidgetDataEvent : UnityEvent<UIWidgetData> {}
 
+[System.Serializable]
+public class SceneEvent : UnityEvent<SceneData> {}
+
+[System.Serializable]
+public class SceneContextEvent : UnityEvent<SceneContext> {}
+
